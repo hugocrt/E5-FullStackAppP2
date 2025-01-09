@@ -1,0 +1,260 @@
+{
+  "info": {
+    "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+    "name": "Quiz API Collection",
+    "description": "Collection pour ajouter des questions à un quiz via l'API Flask",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "url": "http://localhost:5000/login",
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"password\": \"flask2023\"}"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonResponse = JSON.parse(responseBody);",
+              "pm.environment.set('token', jsonResponse.token);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ajouter Question 1",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le plus grand planète du système solaire ?\",\"title\":\"Planète la plus grande\",\"image\":\"falseb64imagecontent\",\"position\":1,\"possibleAnswers\":[{\"text\":\"Terre\",\"isCorrect\":false},{\"text\":\"Jupiter\",\"isCorrect\":true},{\"text\":\"Mars\",\"isCorrect\":false},{\"text\":\"Saturne\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 2",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quelle est la principale source d'énergie du Soleil ?\",\"title\":\"Source d'énergie du Soleil\",\"image\":\"falseb64imagecontent\",\"position\":2,\"possibleAnswers\":[{\"text\":\"La fusion nucléaire\",\"isCorrect\":true},{\"text\":\"La fission nucléaire\",\"isCorrect\":false},{\"text\":\"L'énergie chimique\",\"isCorrect\":false},{\"text\":\"L'énergie électrique\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 3",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le nom de la mission spatiale qui a permis à l'Homme de marcher sur la Lune en 1969 ?\",\"title\":\"Mission Lune 1969\",\"image\":\"falseb64imagecontent\",\"position\":3,\"possibleAnswers\":[{\"text\":\"Apollo 10\",\"isCorrect\":false},{\"text\":\"Apollo 11\",\"isCorrect\":true},{\"text\":\"Apollo 13\",\"isCorrect\":false},{\"text\":\"Gemini 5\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 4",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le nom de la galaxie dans laquelle se trouve la Terre ?\",\"title\":\"Galaxie de la Terre\",\"image\":\"falseb64imagecontent\",\"position\":4,\"possibleAnswers\":[{\"text\":\"La Voie Lactée\",\"isCorrect\":true},{\"text\":\"La Galaxie d'Andromède\",\"isCorrect\":false},{\"text\":\"La Galaxie du Sombrero\",\"isCorrect\":false},{\"text\":\"La Galaxie d'Orion\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 5",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Qui a découvert les lois de la gravitation ?\",\"title\":\"Découvreur de la gravitation\",\"image\":\"falseb64imagecontent\",\"position\":5,\"possibleAnswers\":[{\"text\":\"Albert Einstein\",\"isCorrect\":false},{\"text\":\"Isaac Newton\",\"isCorrect\":true},{\"text\":\"Nikola Tesla\",\"isCorrect\":false},{\"text\":\"Galileo Galilei\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 6",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quelle planète porte le surnom de 'Planète Rouge' ?\",\"title\":\"Planète Rouge\",\"image\":\"falseb64imagecontent\",\"position\":6,\"possibleAnswers\":[{\"text\":\"Mars\",\"isCorrect\":true},{\"text\":\"Vénus\",\"isCorrect\":false},{\"text\":\"Jupiter\",\"isCorrect\":false},{\"text\":\"Uranus\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 7",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le nom de la sonde spatiale qui a exploré Pluton en 2015 ?\",\"title\":\"Sonde spatiale Pluton\",\"image\":\"falseb64imagecontent\",\"position\":7,\"possibleAnswers\":[{\"text\":\"Voyager 1\",\"isCorrect\":false},{\"text\":\"Pioneer 10\",\"isCorrect\":false},{\"text\":\"New Horizons\",\"isCorrect\":true},{\"text\":\"Curiosity\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 8",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le plus grand objet du système solaire après le Soleil ?\",\"title\":\"Objet le plus grand\",\"image\":\"falseb64imagecontent\",\"position\":8,\"possibleAnswers\":[{\"text\":\"Saturne\",\"isCorrect\":false},{\"text\":\"Jupiter\",\"isCorrect\":true},{\"text\":\"La Lune\",\"isCorrect\":false},{\"text\":\"La Terre\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 9",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Quel est le nom de la première station spatiale internationale ?\",\"title\":\"Première station spatiale\",\"image\":\"falseb64imagecontent\",\"position\":9,\"possibleAnswers\":[{\"text\":\"Mir\",\"isCorrect\":false},{\"text\":\"ISS (Station Spatiale Internationale)\",\"isCorrect\":true},{\"text\":\"Skylab\",\"isCorrect\":false},{\"text\":\"Spacelab\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter Question 10",
+      "request": {
+        "url": "http://localhost:5000/questions",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"text\":\"Combien de planètes dans notre système solaire possèdent des anneaux visibles depuis la Terre ?\",\"title\":\"Planètes avec des anneaux\",\"image\":\"falseb64imagecontent\",\"position\":10,\"possibleAnswers\":[{\"text\":\"2\",\"isCorrect\":false},{\"text\":\"3\",\"isCorrect\":false},{\"text\":\"4\",\"isCorrect\":true},{\"text\":\"5\",\"isCorrect\":false}]}"
+        }
+      },
+      "response": []
+    }
+  ]
+}
