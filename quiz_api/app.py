@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from services.question import (
+from services.general import (
     login,
     create_question_and_answers,
     get_quiz_info,
@@ -76,11 +76,11 @@ def PostQuestion():
 
 
 # PUT
-@app.route('/questions/<int:questionId>', methods=['PUT'])
-def PutQuestion(questionId):
+@app.route('/questions/<int:questionPos>', methods=['PUT'])
+def PutQuestion(questionPos):
     auth_token = request.headers.get('Authorization')
     payload = request.get_json()
-    response, status_code = update_question(questionId, payload, auth_token)
+    response, status_code = update_question(questionPos, payload, auth_token)
     return response, status_code
 
 

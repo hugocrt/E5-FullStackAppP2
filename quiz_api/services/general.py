@@ -1,9 +1,9 @@
 import sqlite3
 import datetime
 from .jwt_utils import decode_token
-from quiz_api.model.question import Question
-from quiz_api.model.answer import Answer
-from quiz_api.model.score import Score
+from model.question import Question
+from model.answer import Answer
+from model.score import Score
 import hashlib
 from .jwt_utils import build_token
 
@@ -58,7 +58,7 @@ def rebuild(auth_token: str):
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS scores (
             score_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            player_name TEXT NOT NULL UNIQUE,
+            player_name TEXT NOT NULL,
             score NUMERIC,
             date TEXT NOT NULL
         )

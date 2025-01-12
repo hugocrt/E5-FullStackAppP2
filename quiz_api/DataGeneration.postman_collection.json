@@ -53,7 +53,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"text\":\"Quel est le plus grand planète du système solaire ?\",\"title\":\"Planète la plus grande\",\"image\":\"falseb64imagecontent\",\"position\":1,\"possibleAnswers\":[{\"text\":\"Terre\",\"isCorrect\":false},{\"text\":\"Jupiter\",\"isCorrect\":true},{\"text\":\"Mars\",\"isCorrect\":false},{\"text\":\"Saturne\",\"isCorrect\":false}]}"
+          "raw": "{\"text\":\"Quelle est la plus grande planète du système solaire ?\",\"title\":\"La plus grande planète\",\"image\":\"falseb64imagecontent\",\"position\":1,\"possibleAnswers\":[{\"text\":\"Terre\",\"isCorrect\":false},{\"text\":\"Jupiter\",\"isCorrect\":true},{\"text\":\"Mars\",\"isCorrect\":false},{\"text\":\"Saturne\",\"isCorrect\":false}]}"
         }
       },
       "response": []
@@ -141,7 +141,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\"text\":\"Qui a découvert les lois de la gravitation ?\",\"title\":\"Découvreur de la gravitation\",\"image\":\"falseb64imagecontent\",\"position\":5,\"possibleAnswers\":[{\"text\":\"Albert Einstein\",\"isCorrect\":false},{\"text\":\"Isaac Newton\",\"isCorrect\":true},{\"text\":\"Nikola Tesla\",\"isCorrect\":false},{\"text\":\"Galileo Galilei\",\"isCorrect\":false}]}"
+          "raw": "{\"text\":\"Qui a découvert les lois de la gravitation ?\",\"title\":\"Découverte de la gravitation\",\"image\":\"falseb64imagecontent\",\"position\":5,\"possibleAnswers\":[{\"text\":\"Albert Einstein\",\"isCorrect\":false},{\"text\":\"Isaac Newton\",\"isCorrect\":true},{\"text\":\"Nikola Tesla\",\"isCorrect\":false},{\"text\":\"Galileo Galilei\",\"isCorrect\":false}]}"
         }
       },
       "response": []
